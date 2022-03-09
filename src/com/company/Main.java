@@ -12,21 +12,20 @@ public class Main {
         System.out.println("set1: "+set1);
         System.out.println("set2: "+set2);
         System.out.print("Symmetric difference: ");
-        symmetricDifference(set1, set2);
+        System.out.println(symmetricDifference(set1, set2));
 
 
     }
 
 
 
-    public static void symmetricDifference (Set<Integer> set1, Set<Integer> set2){
-        Set<Integer> newSet = new HashSet<Integer>(set1);
+    public static Set<Integer> symmetricDifference (Set<Integer> set1, Set<Integer> set2){
+        Set<Integer>newSet=new HashSet<>(set1);
         newSet.removeAll(set2);
         set2.removeAll(set1);
         newSet.addAll(set2);
-        System.out.println(newSet);
 
 
-
+        return newSet;
     }
 }
